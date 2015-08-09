@@ -1,15 +1,12 @@
 window.onload = function () {
-    var receiver = document.getElementById('receiver').contentWindow;
-    var btn = document.getElementById('send');
+    function receiveMessage(e) {
+        console.log(e.origin);
+        if (e.origin !== "http://iframe1.unixera.com") {
+            return;
+        }
 
-    function sendMessage(e) {
-        e.preventDefault();
-        console.log('sending message from container to iframe2');
-
-        var message_to_send = document.getElementById('message_to_send').value;
-        receiver.postMessage(message_to_send, 'http://iframe2.unixera.com');
-        console.log('sent message from container to iframe2');
+        document.getElementById("message").innerHTML = e.data;
     }
 
-    btn.addEventListener('click', sendMessage);
+    addEventListener("message", receiveMessage, false);
 }
