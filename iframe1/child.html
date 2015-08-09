@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>iframe</title>
+    </head>
+    <body>
+        <script>
+            function say() {
+                alert("child.html-------> I am at child.html");
+            }
+
+            function callParent() {
+                parent.say();
+            }
+        </script>
+        <input type="button" onclick="callParent()">
+        <iframe src="grand-child.html"></iframe>
+    </body>
+</html>
