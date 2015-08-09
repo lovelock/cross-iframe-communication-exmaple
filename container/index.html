@@ -3,16 +3,15 @@
     <head>
         <meta charset="utf-8"/>
         <title>Container</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <iframe src="http://iframe1.unixera.com/iframe1.html" id="sender">
-            <p>If you see this, your browser does not support iframes. Please check again.</p>
-        </iframe>
         <iframe src="http://iframe2.unixera.com/iframe2.html" id="receiver">
             <p>If you see this, your browser does not support iframes. Please check again.</p>
         </iframe>
 
-        <input type="text" id="msg"/>
+        <input type="text" id="message_to_send" value=""/>
         <input type="submit" id="send"/>
+        <script src="container.js"></script>
     </body>
 </html>
