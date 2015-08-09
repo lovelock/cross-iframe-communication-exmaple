@@ -1,3 +1,4 @@
+//document.domain = "unixera.com";
 window.onload = function () {
     function receiveMessage(e) {
         console.log(e.origin);
