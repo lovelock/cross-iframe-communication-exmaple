@@ -1,12 +1,12 @@
 window.onload = function () {
     document.domain = "unixera.com";
 	var msg = document.getElementById('message');
-    var receiver = top.document.getElementById("iframe1").contentWindow;
+    var receiver = top.document.getElementById("iframe2").contentWindow;
     var btn = document.getElementById("send");
 
 	function receiveMessage(e) {
         console.log(e.data);
-		if (e.origin !== 'http://iframe1.unixera.com') {
+		if (e.origin !== 'http://iframe2.unixera.com') {
 			return;
 		}
 
@@ -15,11 +15,10 @@ window.onload = function () {
 
     function sendMessage(e) {
         var message_to_send = document.getElementById("message_to_send").value;
-        receiver.postMessage(message_to_send, "http://iframe1.unixera.com");
+        receiver.postMessage(message_to_send, "http://iframe2.unixera.com");
     }
 
     btn.addEventListener("click", sendMessage);
 
     window.addEventListener('message', receiveMessage, false);
 }
-
