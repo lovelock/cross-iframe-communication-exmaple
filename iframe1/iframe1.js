@@ -1,10 +1,3 @@
-//document.domain = "unixera.com";
-function say() {
-    alert("I am alerting");
+function say(msg) {
+    alert("I am alerting " + msg);
 }
-
-/*
- *window.onload = function () {
- *    frames.iframe2.iframe2_function();
- *}
- */

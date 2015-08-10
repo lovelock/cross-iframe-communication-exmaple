@@ -1,11 +1,4 @@
-//document.domain = "unixera.com";
 window.onload = function () {
-    location.href="http://iframe1.unixera.com/iframe3.html";
-    parent.say();
-    //frames.iframe3.sayHello();
+    var msg_to_send = "I am iframe2";
+    location.href="http://iframe1.unixera.com/iframe3.html?aaa=" + msg_to_send;
 }
-
-function iframe2_function () {
-    alert("I am from iframe2");
-}
-

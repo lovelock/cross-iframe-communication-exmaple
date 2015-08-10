@@ -1,4 +1,2 @@
-//document.domain = "unixera.com";
-function sayHello() {
-    alert("I am from iframe3");
-}
+var msg = location.search;
+parent.say(msg);
