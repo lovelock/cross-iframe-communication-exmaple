@@ -1,14 +1,5 @@
 window.onload = function () {
-	var msg = document.getElementById('message');
-
-	function receiveMessage(e) {
-        console.log(e.data);
-		if (e.origin !== 'http://container.unixera.com') {
-			return;
-		}
-
-		msg.innerHTML = e.data;
-	}
-
-    addEventListener('message', receiveMessage, false);
+    window.name = "I am a message from iframe2";
+    console.log(window.name);
+    location.href = "http://iframe1.unixera.com/iframe3.html";
 }
